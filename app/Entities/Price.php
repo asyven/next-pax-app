@@ -269,6 +269,14 @@ class Price
     }
 
     /**
+     * @return string
+     */
+    public function getPeriodFromString(): string
+    {
+        return $this->period_from->format("Y-m-d");
+    }
+
+    /**
      * @param DateTime $period_from
      */
     public function setPeriodFrom(DateTime $period_from): void
@@ -282,6 +290,14 @@ class Price
     public function getPeriodTill(): DateTime
     {
         return $this->period_till;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPeriodTillString(): string
+    {
+        return $this->period_till->format("Y-m-d");
     }
 
     /**
